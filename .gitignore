@@ -1,9 +1,9 @@
-# Общие файлы и директории, которые стоит игнорировать
+### Общие файлы и директории ###
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!**/src/main/**/target/  # Исключение: таргеты в main
+!**/src/test/**/target/  # Исключение: таргеты в test
 
 ### IntelliJ IDEA ###
 .idea/
@@ -14,7 +14,7 @@ target/
 .mvn/
 mvnw
 
-### STS ###
+### STS (Spring Tool Suite) ###
 .apt_generated
 .classpath
 .factorypath
@@ -30,13 +30,13 @@ mvnw
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!**/src/main/**/build/  # Исключение: сборки в main
+!**/src/test/**/build/   # Исключение: сборки в test
 
 ### VS Code ###
 .vscode/
 
-### Java и пакеты ###
+### Файлы Java и временные файлы ###
 *.class
 *.log
 *.ctxt
@@ -48,5 +48,5 @@ build/
 *.zip
 *.tar.gz
 *.rar
-hs_err_pid*
-replay_pid*
+hs_err_pid*  # Дампы памяти JVM при ошибках
+replay_pid*  # Логи REPLAY (если используются)
